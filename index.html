@@ -21,6 +21,7 @@
 <meta name="twitter:image" content="https://www.mariaheliseesthetics.com/assets/og-image.jpg">
 <link rel="icon" href="/assets/logo-mark.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/logo-mark.png">
+<link rel="preload" href="/assets/logo-mark.webp" as="image" type="image/webp">
 <link rel="preload" href="/assets/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
@@ -46,6 +47,8 @@
     "postalCode": "01453",
     "addressCountry": "US"
   },
+  "geo": {"@type":"GeoCoordinates","latitude":"42.5512977","longitude":"-71.7648893"},
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"4","bestRating":"5","worstRating":"1"},
   "areaServed": [
     {"@type":"City","name":"Leominster"},
     {"@type":"City","name":"Fitchburg"},
@@ -114,26 +117,34 @@
   </div>
 </header>
 <main id="main">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="eyebrow">Licensed esthetician &middot; Leominster, MA</p>
-        <h1>Advanced skin. Confident you.</h1>
-        <p class="lede">Customized facials, peels, brows, lashes and waxing in a private room in Leominster. Every appointment starts with a look at your actual skin, not a menu you have to guess your way through.</p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="https://mariaheliseesthetics.as.me/">Book an appointment</a>
-          <a class="btn btn-ghost" href="/services">Services &amp; pricing</a>
-        </div>
+  <section class="hero hero-centred">
+    <div class="wrap">
+      <div class="hero-mark">
+        <span class="hero-halo" aria-hidden="true"></span>
+        <img src="/assets/logo-mark.webp" width="256" height="256"
+             alt="Mariah Elise Esthetics &mdash; Advanced Skin. Confident You."
+             fetchpriority="high" decoding="async">
       </div>
-      <div class="hero-media">
-        <img src="/assets/brow-detail.webp" width="640" height="800" alt="Close-up of a freshly shaped and tinted brow" fetchpriority="high" decoding="async">
+      <p class="eyebrow">Licensed esthetician &middot; Leominster, MA</p>
+      <h1>Advanced skin.<br>Confident you.</h1>
+      <p class="lede">Customized facials, peels, brows, lashes and waxing in a private room in Leominster. Every appointment starts with a look at your actual skin, not a menu you have to guess your way through.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://mariaheliseesthetics.as.me/">Book an appointment</a>
+        <a class="btn btn-ghost" href="/services">Services &amp; pricing</a>
       </div>
     </div>
   </section>
 
+  <figure class="proof-band">
+    <img src="/assets/lash-lift-hero.webp" width="880" height="1100"
+         alt="Close-up of a lash lift and shaped brow by Mariah Elise Esthetics"
+         loading="lazy" decoding="async">
+    <figcaption>Lash lift and brow shaping</figcaption>
+  </figure>
+
   <div class="strip">
     <div class="strip-in">
-      <div class="strip-item"><strong>Licensed esthetician</strong><span>Trained in skin health, not just treatments</span></div>
+      <div class="strip-item"><strong>5.0 on Google</strong><span>From 4 client reviews</span></div>
       <div class="strip-item"><strong>Private treatment room</strong><span>Inside Mnandi Salon &amp; Spa, Leominster</span></div>
       <div class="strip-item"><strong>Evenings &amp; Saturdays</strong><span>Appointments to 9 pm on Tuesdays</span></div>
     </div>
@@ -171,27 +182,40 @@
     </div>
   </section>
 
-  <section class="section" style="background:var(--ink-2);border-block:1px solid var(--line-soft)" aria-labelledby="res-h">
+  <section class="section band" aria-labelledby="band-h">
+    <div class="wrap center">
+      <p class="eyebrow">Mariah Elise Esthetics</p>
+      <h2 id="band-h" class="band-h">Advanced skin.<br>Confident you.</h2>
+      <ul class="tag-row band-tags">
+        <li>Customized facials</li>
+        <li>Skin health &amp; education</li>
+        <li>Result driven treatments</li>
+      </ul>
+      <a class="btn btn-primary" style="margin-top:36px" href="https://mariaheliseesthetics.as.me/">Book an appointment</a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="rev-h">
     <div class="wrap">
-      <div class="sect-head">
-        <p class="eyebrow">Recent work</p>
-        <h2 id="res-h">Small changes, done well</h2>
-        <p class="lede">Real clients, real appointments. No filters, no retouching.</p>
+      <div class="sect-head center">
+        <p class="eyebrow">5.0 on Google &middot; 4 reviews</p>
+        <h2 id="rev-h">What clients say</h2>
       </div>
-      <div class="results">
-        <figure class="result-fig">
-          <img src="/assets/brow-before.webp" width="720" height="360" alt="Natural brows before shaping and tinting" loading="lazy" decoding="async">
-          <figcaption>Brow tint &mdash; before</figcaption>
+      <div class="cards">
+        <figure class="card review">
+          <blockquote>&ldquo;Very clean and concise work. Great prices for the great work as well. Highly recommend!&rdquo;</blockquote>
+          <figcaption>Ava L. &middot; Google review</figcaption>
         </figure>
-        <figure class="result-fig">
-          <img src="/assets/brow-after.webp" width="720" height="360" alt="The same brows after a custom tint, with a defined shape" loading="lazy" decoding="async">
-          <figcaption>Brow tint &mdash; after</figcaption>
+        <figure class="card review">
+          <blockquote>&ldquo;Mariah&rsquo;s waxing is so perfect and clean &hellip; she&rsquo;s hardworking, passionate, professional, and precise. Everyone needs to book!&rdquo;</blockquote>
+          <figcaption>Kay&rsquo;Don A. &middot; Google review</figcaption>
         </figure>
-        <figure class="result-fig result-wide">
-          <img src="/assets/lash-lift.webp" width="1200" height="600" alt="Lifted and tinted natural lashes after a lash lift" loading="lazy" decoding="async">
-          <figcaption>Lash lift and tint</figcaption>
+        <figure class="card review">
+          <blockquote>&ldquo;Amazing experience. She is so talented!&rdquo;</blockquote>
+          <figcaption>Regan M. &middot; Google review</figcaption>
         </figure>
       </div>
+      <p class="center" style="margin-top:34px"><a class="link-lg" href="https://www.google.com/maps/place/Mariah+Elise+Esthetics/@42.5512977,-71.7648893,17z">Read them on Google</a></p>
     </div>
   </section>
 
