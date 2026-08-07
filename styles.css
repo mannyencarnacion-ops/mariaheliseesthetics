@@ -531,3 +531,52 @@ address strong { color: var(--bone); font-weight: 500; }
   .work-figure img { max-width: 380px; aspect-ratio: 1; }
   .work-figure figcaption { max-width: 380px; text-align: center; }
 }
+
+/* ---------- consultation: its own block, because it is not a facial ---------- */
+.consult-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px 32px;
+  align-items: center;
+  background: var(--ink-2);
+  border: 1px solid var(--gold-deep);
+  border-radius: var(--r);
+  padding: clamp(24px, 3.4vw, 34px);
+  margin-bottom: clamp(40px, 6vw, 60px);
+}
+.consult-card p { max-width: 62ch; }
+.consult-price {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.9rem;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+.consult-price .menu-time { text-align: right; }
+@media (max-width: 640px) {
+  .consult-card { grid-template-columns: 1fr; }
+  .consult-price { text-align: left; }
+  .consult-price .menu-time { text-align: left; }
+}
+
+/* ---------- bigger brand lockup + bigger Book button (Manny, 2026-08-06) ---------- */
+.header-in { min-height: 86px; }
+.brand { gap: 14px; }
+.brand img { width: 54px; height: 54px; }
+.brand-name { font-size: 1.32rem; }
+.brand-sub { font-size: .64rem; letter-spacing: .28em; }
+
+.nav .btn {
+  font-size: .94rem;
+  padding: 15px 38px;
+  min-height: 54px;
+  letter-spacing: .12em;
+}
+@media (max-width: 900px) {
+  .header-in { min-height: 82px; }
+  .nav { inset: 82px 0 auto 0; }
+  .brand img { width: 48px; height: 48px; }
+  .brand-name { font-size: 1.2rem; }
+}
