@@ -23,6 +23,7 @@
 const ORIGIN = 'https://www.mariaheliseesthetics.com';
 const BOOKING = 'https://mariaheliseesthetics.as.me/';
 const INSTAGRAM = 'https://www.instagram.com/mariahelise.esthetics/';
+const EMAIL = 'contact@mariaheliseesthetics.com';
 
 const FORMS = {
   contact: {
@@ -65,8 +66,9 @@ function errorPage(msg, status, detail) {
     'border:1px solid #C9AE85;text-decoration:none;font-weight:600;letter-spacing:.1em;' +
     'text-transform:uppercase;font-size:.85rem}a.inline{color:#C9AE85}</style></head><body>' +
     '<div class="box"><h1>That didn’t send.</h1><p>' + esc(msg) + '</p>' +
-    '<p>Nothing reached me, so nothing is lost on your end — please book directly using the ' +
-    'calendar below, or send me a message on <a class="inline" href="' + INSTAGRAM + '">Instagram</a>.</p>' +
+    '<p>Nothing reached me, so nothing is lost on your end — please email ' +
+    '<a class="inline" href="mailto:' + EMAIL + '">' + EMAIL + '</a>, book directly using the ' +
+    'calendar below, or message me on <a class="inline" href="' + INSTAGRAM + '">Instagram</a>.</p>' +
     '<a class="btn" href="' + BOOKING + '">Book an appointment</a>' +
     '<p style="margin-top:26px"><a class="inline" href="' + ORIGIN + '/contact">Back to the form</a></p>' +
     '</div></body></html>';
