@@ -580,3 +580,28 @@ address strong { color: var(--bone); font-weight: 500; }
   .brand img { width: 48px; height: 48px; }
   .brand-name { font-size: 1.2rem; }
 }
+
+/* ---------- two work photos, one row (2026-08-12: her first real makeup photo,
+   IMG_1944 — cropped tight to the face so the store background reads as bokeh,
+   not as a location) ---------- */
+.work-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.work-duo .work-figure img { max-width: 100%; }
+.work-duo .work-figure figcaption { max-width: 100%; }
+@media (max-width: 560px) {
+  .work-duo { grid-template-columns: 1fr; gap: 30px; }
+}
+
+/* ---------- photo inside a price group: left-aligned, capped small so the
+   menu stays scannable ---------- */
+.menu-figure { margin: 26px 0 10px; }
+.menu-figure img { max-width: 340px; margin-inline: 0; }
+.menu-figure figcaption { max-width: 340px; margin-inline: 0; }
+@media (max-width: 820px) {
+  .menu-figure img { max-width: 340px; aspect-ratio: 4/5; }
+  .menu-figure figcaption { text-align: left; }
+}
