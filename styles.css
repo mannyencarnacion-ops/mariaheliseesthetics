@@ -605,3 +605,19 @@ address strong { color: var(--bone); font-weight: 500; }
   .menu-figure img { max-width: 340px; aspect-ratio: 4/5; }
   .menu-figure figcaption { text-align: left; }
 }
+
+/* ---------- two price-group photos side by side: soft glam next to full glam,
+   so the two makeup tiers are compared where the prices are ---------- */
+.menu-figure-duo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 340px));
+  gap: 18px;
+  align-items: start;
+  margin: 26px 0 10px;
+}
+.menu-figure-duo .menu-figure { margin: 0; }
+.menu-figure-duo .menu-figure img { width: 100%; max-width: 340px; }
+.menu-figure-duo .menu-figure figcaption { max-width: 340px; }
+@media (max-width: 700px) {
+  .menu-figure-duo { grid-template-columns: 1fr; gap: 28px; }
+}
