@@ -396,7 +396,22 @@ address strong { color: var(--bone); font-weight: 500; }
 .nav a.btn-primary:hover { color: var(--ink); }
 .nav a.btn-ghost { color: var(--gold); }
 
-/* ---------- tagline band (replaces the gallery — one real photo, no repeated crops) ---------- */
+/* ---------- gallery: every real client photo, one grid (added 2026-08-23) ----------
+   Grows one <figure> at a time as Mariah sends new photos — no other change needed. */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  justify-items: center;
+}
+.gallery-figure img { max-width: 340px; }
+.gallery-figure figcaption { max-width: 340px; text-align: center; }
+@media (max-width: 820px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-figure img, .gallery-figure figcaption { max-width: 380px; }
+}
+
+/* ---------- tagline band (kept alongside the gallery above since 2026-08-23) ---------- */
 .band {
   background:
     radial-gradient(90% 120% at 50% 0%, rgba(201,174,133,.075), transparent 64%),
