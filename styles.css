@@ -398,6 +398,7 @@ address strong { color: var(--bone); font-weight: 500; }
 
 /* ---------- gallery: every real client photo, one grid (added 2026-08-23) ----------
    Grows one <figure> at a time as Mariah sends new photos — no other change needed. */
+#gallery { scroll-margin-top: 84px; } /* clears the sticky header when arriving via /#gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
