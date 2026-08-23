@@ -394,6 +394,12 @@
   });
   var mq = window.matchMedia('(min-width: 901px)');
   mq.addEventListener('change', function () { if (mq.matches) set(false); });
+  if (location.hash) {
+    window.addEventListener('load', function () {
+      var el = document.getElementById(location.hash.slice(1));
+      if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+    });
+  }
 }());
 </script>
 </body>
